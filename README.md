@@ -2,7 +2,9 @@
 
 Masih pake versi 2? Ga mau pindah ke versi ini yang berkali lipat lebih cepat? Gapapa, emang ga semua siap dengan perubahan.
 
-FYI, kalo v2 bisa entri satu baris SKP-mu dalam **10 detik**, v3 ini cuma butuh **3 detik untuk entri 12 baris**.
+FYI, kalo v2 bisa entri satu baris SKP-mu dalam **10 detik**, v3 ini cuma butuh **1.5 detik untuk entri 12 baris**.
+
+Ini ga bohong. Ini hasil 1x uji coba dummy SKP.
 
 Masih gak mau pindah ke v3? Yaudah.
 
