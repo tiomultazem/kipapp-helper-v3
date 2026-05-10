@@ -35,6 +35,7 @@ def check_deps():
 def main():
     check_deps()
 
+    minor = sys.version_info.minor
     base_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Prioritaskan folder 'frames' (source) jika ada (untuk Developer)
