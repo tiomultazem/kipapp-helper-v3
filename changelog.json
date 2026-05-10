@@ -1,0 +1,9 @@
+{
+  "3.2605.10": [
+    "Minor fix",
+    "Edit readme"
+  ],
+  "3.2605.09": [
+    "Initial release arsitektur distribusi multi-versi Python"
+  ]
+}

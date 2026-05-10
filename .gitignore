@@ -1,0 +1,15 @@
+[Dd]esktop.ini
+.env
+cache/
+__pycache__/
+*.py
+!main.py
+build_venv/
+v3.13_venv/
+v3.14_venv/
+nuitka.bat
+r.bat
+builder.py
+c.bat
+frames/
+_temp_build_*/
