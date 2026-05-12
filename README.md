@@ -81,17 +81,17 @@ A: Sangat aman dari ekspose ke pihak luar, termasuk ke saya sendiri. Saya tidak 
 A: Kode saya sangat mudah dibongkar. Silakan dibongkar dan dicari bagian mana yang anda curigai melakukan pencurian SSO anda.
 
 **Q: Apa motivasi anda (developer) mengembangkan aplikasi ini, bila anda tidak berniat mencuri data pegawai lain maupun tidak memonetisasi?**  
-A: Saya pusing entri SKP satu-persatu manual, maka saya membuat alat ini. Mau tidak pusing juga? Ayo pake alat saya juga. Harapannya sih pusing anda berkurang. Ga mau karena trust issue? Yasudah, ga maksa.
+A: Cuma sekedar berbagi kebahagiaan. Saya pusing entri SKP satu-persatu manual, maka saya membuat alat ini. Mau tidak pusing juga? Ayo pake alat saya juga. Harapannya sih pusing anda berkurang. Saya hepi, anda hepi juga. Ga mau karena trust issue? Yasudah, ga maksa.
 
 **Q: Bisakah kami review kode bersama anda?**  
-A: Baik untuk kepentingan satker maupun pribadi, silakan kontak saya terlebih dahulu untuk janjian tanggal dan waktunya.
+A: Bisa. Baik untuk kepentingan satker maupun pribadi, silakan kontak saya terlebih dahulu untuk janjian tanggal dan waktunya.
 
 ---
 
 ## Kompatibilitas Versi
-Aplikasi ini mendukung versi 3.12, 3.13, dan 3.14. Gausah repot-repot hapus versi python mu
-demi mencocokkan versiku di mana aku mengembangkan menggunakan python 3.12.7 ini. Pokoknya,
-`main.py` akan pintar mendeteksi versi Python yang kamu gunakan dan menjalankan modul yang paling sesuai.
+Aplikasi ini mendukung versi 3.12, 3.13, dan 3.14. Gausah repot-repot hapus versi python anda
+demi mencocokkan versi pengembangan saya yang menggunakan python 3.12.7 ini. Pokoknya,
+`main.py` akan pintar mendeteksi versi Python yang anda gunakan dan menjalankan modul yang paling sesuai.
 
 ---
 
