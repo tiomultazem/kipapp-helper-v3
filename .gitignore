@@ -8,7 +8,6 @@ build_venv/
 v3.13_venv/
 v3.14_venv/
 nuitka.bat
-r.bat
 builder.py
 c.bat
 frames/
