@@ -1,5 +1,6 @@
 [Dd]esktop.ini
 .env
+.vscode/
 cache/
 __pycache__/
 *.py
@@ -12,3 +13,4 @@ builder.py
 c.bat
 frames/
 _temp_build_*/
+endpoints.json

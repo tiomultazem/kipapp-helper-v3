@@ -1,0 +1,29 @@
+{
+  "currentVersion": "3.2605.17",
+  "entri": {
+    "max_workers": 3
+  },
+  "ui": {
+    "theme": "light",
+    "frames": {
+      "skp": {
+        "expanded": true
+      },
+      "task": {
+        "expanded": true
+      },
+      "rk": {
+        "expanded": true
+      },
+      "entri": {
+        "expanded": true
+      },
+      "log": {
+        "expanded": true
+      }
+    },
+    "task": {
+      "import_mode": "Excel"
+    }
+  }
+}

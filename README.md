@@ -12,33 +12,32 @@ Masih gak mau pindah ke v3? Yaudah.
 
 ## Persiapan
 Saya asumsikan anda lanjut membaca karena ingin pindah ke versi 3. Here we go.
-1. Download dan instal Git.
-> [!NOTE]
-> Git itu wajib ya. Titik. Buat apa? Untuk download dan update. Selain pakai Git, anda harus download dan update manual.
-2. Download dan instal Python (kalo anda pengguna KiPApp Helper versi 2, gausah instal lagi)
+1. Download dan instal Python (kalo anda pengguna KiPApp Helper versi 2, gausah instal lagi)
+2. Download KiPApp Helper v3 versi ZIP dari GitHub, lalu ekstrak.
 3. Siapkan excel SKP dengan 10 kolom urut dari kiri. Yang tidak berbintang berarti boleh kosongan.
-- *Start Date     : Format tanggal "YYYY-MM-DD".
-- End Date        : Diisi hanya bila menggunakan rentang tanggal. Format tanggal YYYY-MM-DD.
-- Jam Mulai       : Diisi hanya bila menggunakan rentang jam. Pastikan formatnya "HH:MM" 24 jam dengan angka menit kelipatan 15.
-- Jam Selesai     : Diisi hanya bila menggunakan rentang jam. Pastikan formatnya "HH:MM" 24 jam dengan angka menit kelipatan 15.
-- *Rencana Kinerja: Kosongkan dulu aja. Nanti diisi di bagian [**Panduan Penggunaan**](#panduan-penggunaan) di bawah ini.
-- *Kegiatan       : Minimal 10 karakter.
-- *Capaian        : Minimal 10 karakter.
-- *Progres        : Diisi 1-100, aku biasa kuisi 100.
-- *Link Bukti     : Diisi berupa link. Upload dulu ke drive mu.
-- *Centang        : Diisi 1 bila masuk ke capaian, dan 0 bila tidak. Biasanya aku selalu 1.
+
+| Kolom | Judul | Wajib | Aturan isi |
+|---:|---|:---:|---|
+| 1 | Start Date | Ya | Tanggal. Aplikasi akan mengubahnya jadi `YYYY-MM-DD`. |
+| 2 | End Date | Tidak | Tanggal. Isi hanya bila memakai rentang tanggal. Jika kosong, tetap kosong. |
+| 3 | Jam Mulai | Tidak | Jam. Aplikasi akan mengubahnya jadi `HH:MM`. Isi hanya bila memakai rentang jam. |
+| 4 | Jam Selesai | Tidak | Jam. Aplikasi akan mengubahnya jadi `HH:MM`. Isi hanya bila memakai rentang jam. |
+| 5 | Rencana Kinerja | Ya | Isi nomor RK sesuai tabel di aplikasi. Nanti klik `Ubah RK`. |
+| 6 | Kegiatan | Ya | Minimal 10 karakter. |
+| 7 | Capaian | Ya | Minimal 10 karakter. |
+| 8 | Progres | Ya | Isi 1-100. Biasanya 100. |
+| 9 | Link Bukti | Ya | Isi link bukti dukung. |
+| 10 | Centang | Ya | Isi 1 bila masuk capaian SKP, 0 bila tidak. Biasanya 1. |
+
+Format tanggal yang aman: `YYYY-MM-DD`, `DD-MM-YYYY`, `DD/MM/YYYY`, `YYYY/MM/DD`, `DD.MM.YYYY`, `YYYYMMDD`, atau format tanggal asli Excel.
+Format jam yang aman: `HH:MM`, `H:MM`, `HH.MM`, `H.MM`, `HHMM`, angka jam seperti `8`, atau format jam asli Excel.
 
 ---
 
 ## Instalasi
-1. Buka CMD di direktori tempat anda mau simpan KiPApp Helper v3.
-2. Ketikkan dan enter satupersatu baris:
-   ```cmd
-   git clone https://github.com/tiomultazem/kipapp-helper-v3
-   cd kipapp-helper-v3
-   python main.py
-   ```
-3. (Bila anda ngeyel tidak menginstal Git) Download manual, ekstrak ke file manager anda. Jalankan dengan klik 2x file `run.bat` 
+1. Download ZIP KiPApp Helper v3 dari GitHub.
+2. Ekstrak ZIP ke folder yang anda mau.
+3. Jalankan dengan klik 2x file `run.bat`.
 4. Jendela KiPApp Helper v3 akan terbuka.
 5. Buka file env, isi username dan password SSO anda. Lalu simpan dan edit namanya menjadi ".env"
 pake titik di depannya.

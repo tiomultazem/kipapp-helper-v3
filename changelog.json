@@ -5,5 +5,10 @@
   ],
   "3.2605.09": [
     "Initial release KiPApp Helper v3"
+  ],
+  "3.2605.17": [
+    "Dukungan impor spreadsheet",
+    "Peningkatan pengalaman pengguna",
+    "Perubahan metode pembaruan menjadi lebih mudah"
   ]
 }
