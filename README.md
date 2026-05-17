@@ -82,8 +82,8 @@ Silakan ke [QnA KiPApp Helper](https://s.bps.go.id/kipapp-helper-qna)  untuk ber
 
 ---
 
-## Kompatibilitas Versi
-Aplikasi ini mendukung versi 3.12, 3.13, dan 3.14. Gausah repot-repot hapus versi python anda
+## Kompatibilitas Versi Python
+Aplikasi ini mendukung versi Python 3.12, 3.13, dan 3.14. Gausah repot-repot hapus versi python anda
 demi mencocokkan versi pengembangan saya yang menggunakan python 3.12.7 ini. Pokoknya,
 `main.py` akan pintar mendeteksi versi Python yang anda gunakan dan menjalankan modul yang paling sesuai.
 
