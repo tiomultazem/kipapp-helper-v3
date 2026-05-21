@@ -12,6 +12,7 @@ v3.14_venv/
 nuitka.bat
 builder.py
 c.bat
+pushone.bat
 frames/
 _temp_build_*/
 endpoints.json
