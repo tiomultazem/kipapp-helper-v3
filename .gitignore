@@ -10,7 +10,6 @@ build_venv/
 v3.13_venv/
 v3.14_venv/
 nuitka.bat
-builder.py
 c.bat
 pushone.bat
 frames/

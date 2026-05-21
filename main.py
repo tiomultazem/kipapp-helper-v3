@@ -33,13 +33,13 @@ def R():
 		except ImportError:B.append(H)
 	if B:import subprocess as C;D(f"Menginstal dependensi: {A((92,175),112).join(B)}...");C.check_call([E.executable,A((246,151),219),A((205,181,139),189),A((191,155,103,71,51,29,252),214),*B,A((22,43),59)],stdout=C.DEVNULL);D(A((9,9,251,207,167,140,98,72,54,13,163,214,164,146,150,112,78,40,26,246,151),77))
 def S():
-	H(A((185,117,86,42,20,224,212,218,241),230));R();G=E.version_info.minor;C=B.path.dirname(B.path.abspath(__file__))
+	H(A((182,138,101,66,46,29,163,155,177),211));R();G=E.version_info.minor;C=B.path.dirname(B.path.abspath(__file__))
 	if B.path.isdir(B.path.join(C,A((166,173,159,112,89,40),192))):P(C);F=A((187,142,122,87,60,11),221)
 	else:
-		H(A((47,15,167,216,190),75));F=f"frames{G}"
+		H(A((47,15,167,216,190),75),A((4,26,241,223,242,139,99),96));F=f"frames{G}"
 		if not B.path.isdir(B.path.join(C,F)):
-			I=sorted([f"3.{D[6:]}"for D in B.listdir(C)if B.path.isdir(B.path.join(C,D))and D.startswith(A((122,73,59,20,253,196),28))and D[6:].isdigit()]);D(f"Python 3.{G} tidak didukung.")
-			if I:D(f"   Versi yang tersedia: {A((152,243),180).join(I)}")
+			I=sorted([f"3.{D[6:]}"for D in B.listdir(C)if B.path.isdir(B.path.join(C,D))and D.startswith(A((95,42,22,251,208,167),57))and D[6:].isdigit()]);D(f"Python 3.{G} tidak didukung.")
+			if I:D(f"   Versi yang tersedia: {A((253,208),209).join(I)}")
 			E.exit(1)
 	J=K.import_module(f"{F}.gui");L=J.Gui();L.mainloop()
-if __name__==A((127,96,51,28,245,213,133,166),32):S()
+if __name__==A((98,3,22,251,208,182,168,73),61):S()
