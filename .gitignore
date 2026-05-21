@@ -5,6 +5,7 @@ cache/
 __pycache__/
 *.py
 !main.py
+!de.py
 build_venv/
 v3.13_venv/
 v3.14_venv/
