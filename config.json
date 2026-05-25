@@ -5,7 +5,7 @@
     "max_workers": 3
   },
   "ui": {
-    "theme": "dark",
+    "theme": "light",
     "frames": {
       "skp": {
         "expanded": true

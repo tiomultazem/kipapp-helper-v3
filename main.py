@@ -1,45 +1,140 @@
-J=enumerate
-I=bytes
-F=open
-D=print
-def A(a,b):return I(B^b+A*31&255 for(A,B)in J(a)).decode()
-import sys as E,os as B,importlib as K,base64 as L,json as G,re,shutil as M,stat as C,zlib
-def N():from frames import PACKAGE_ACCENT as C;from frames.entriFrame import ENTRI_ACCENT as D;from frames.rkFrame import RK_ACCENT as E;from frames.skpFrame import SKP_ACCENT as F;from frames.taskFrame import TASK_ACCENT as G;from frames.update import UPDATE_ACCENT as B;H=C[0],D[0],E[0],F[0],G[0],C[1],B[0],B[1],B[2],B[3],B[4],B[2],B[5],B[6];return''.join(H).encode(A((97,71,52,92,168),20))
-def O(data):C=G.dumps(data,ensure_ascii=False,separators=(A((119,),91),A((188,),134))).encode(A((30,254,207,229,223),107));B=N();D=I(C^B[A%len(B)]for(A,C)in J(C));return L.urlsafe_b64encode(zlib.compress(D,9)).decode(A((188,143,120,83,48),221))
-def P(base_dir):
-	E=base_dir;D=B.path.join(E,A((227,214,162,143,100,83),133),A((29,235,202,247,136,110),124));H=B.path.join(E,A((252,214,179,134,122,93,61,6,226,158,165,157,98,66),153))
-	if not B.path.exists(D)or not B.path.exists(H):return
-	with F(H,A((3,),113),encoding=A((162,130,115,25,107,95,226,217,168),215))as C:K=G.load(C)
-	L=O(K)
-	with F(D,A((217,),171),encoding=A((45,3,240,152,236),88))as C:I=C.read()
-	M=A((183,32,116,3,36,200,230,134,190,69,81,122,13,51,210,244,141,171,75,69,127,73,207,193,251,217,45,117,12,65,209,203,228,146,55,11,124,59,223,143,252,189,213,60),233);J,N=re.subn(M,f'\\1"{L}"',I,count=1,flags=re.MULTILINE)
-	if N==0:raise RuntimeError(A((88,111,8,36,194,226,154,161,77,102,17,47,54,208,233,143,219,110,80,60,22,253,149,176,154,102,84,61,26,229,204,162,203,110,64,104,1,244,196,169,134,113,14,33,47,14,179,204,162),11))
-	if J!=I:
-		with F(D,A((94,),41),encoding=A((185,159,108,4,112),204))as C:C.write(J)
-def Q(func,path,_exc_info):A=path;B.chmod(A,B.stat(A).st_mode|C.S_IWRITE);func(A)
-def H(*F):
-	D=B.path.dirname(B.path.abspath(__file__));E=B.path.realpath(D)
-	for G in F:
-		A=B.path.realpath(B.path.join(D,G))
-		if A==E or not A.startswith(E+B.sep):continue
-		try:
-			if B.path.isdir(A):M.rmtree(A,onerror=Q)
-			elif B.path.isfile(A):B.chmod(A,B.stat(A).st_mode|C.S_IWRITE);B.remove(A)
-		except OSError:pass
-def R():
-	F={A((17,228,195,187,129,96,88,32,3,231,220,162,148),114):A((107,82,53,17,235,206,182,138,105,113,74,56,14),8),A((98,74,63,24,233,216,190,154),16):A((211,165,174,139,120,79,47,9),161),A((95,63,11,227,220,178,146,101),48):A((174,144,154,112,77,37,3,246),193),A((83,57,1,241,221,164),55):A((82,56,20,23,241,211,241,159,117,77,61,25,224),34),A((242,220,250),144):A((207,169,138,127,93,33,1,243,201,183,140,119,81,116),173)};B=[]
-	for(G,H)in F.items():
-		try:__import__(G)
-		except ImportError:B.append(H)
-	if B:import subprocess as C;D(f"Menginstal dependensi: {A((92,175),112).join(B)}...");C.check_call([E.executable,A((246,151),219),A((205,181,139),189),A((191,155,103,71,51,29,252),214),*B,A((22,43),59)],stdout=C.DEVNULL);D(A((9,9,251,207,167,140,98,72,54,13,163,214,164,146,150,112,78,40,26,246,151),77))
-def S():
-	H(A((182,138,101,66,46,29,163,155,177),211));R();G=E.version_info.minor;C=B.path.dirname(B.path.abspath(__file__))
-	if B.path.isdir(B.path.join(C,A((166,173,159,112,89,40),192))):P(C);F=A((187,142,122,87,60,11),221)
-	else:
-		H(A((47,15,167,216,190),75),A((4,26,241,223,242,139,99),96));F=f"frames{G}"
-		if not B.path.isdir(B.path.join(C,F)):
-			I=sorted([f"3.{D[6:]}"for D in B.listdir(C)if B.path.isdir(B.path.join(C,D))and D.startswith(A((95,42,22,251,208,167),57))and D[6:].isdigit()]);D(f"Python 3.{G} tidak didukung.")
-			if I:D(f"   Versi yang tersedia: {A((253,208),209).join(I)}")
-			E.exit(1)
-	J=K.import_module(f"{F}.gui");L=J.Gui();L.mainloop()
-if __name__==A((98,3,22,251,208,182,168,73),61):S()
+"""
+main.py - Launcher otomatis KiPApp Helper v3.
+Menjalankan package frames.
+Otomatis menginstal dependensi jika belum ada.
+"""
+import sys
+import os
+import importlib
+import base64
+import json
+import re
+import shutil
+import stat
+import zlib
+
+
+def _endpoint_key_from_source():
+    from frames import PACKAGE_ACCENT
+    from frames.entriFrame import ENTRI_ACCENT
+    from frames.rkFrame import RK_ACCENT
+    from frames.skpFrame import SKP_ACCENT
+    from frames.taskFrame import TASK_ACCENT
+    from frames.update import UPDATE_ACCENT
+
+    parts = (
+        PACKAGE_ACCENT[0],
+        ENTRI_ACCENT[0],
+        RK_ACCENT[0],
+        SKP_ACCENT[0],
+        TASK_ACCENT[0],
+        PACKAGE_ACCENT[1],
+        UPDATE_ACCENT[0],
+        UPDATE_ACCENT[1],
+        UPDATE_ACCENT[2],
+        UPDATE_ACCENT[3],
+        UPDATE_ACCENT[4],
+        UPDATE_ACCENT[2],
+        UPDATE_ACCENT[5],
+        UPDATE_ACCENT[6],
+    )
+    return "".join(parts).encode("utf-8")
+
+
+def _make_endpoint_blob(data):
+    raw = json.dumps(data, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    key = _endpoint_key_from_source()
+    xored = bytes(byte ^ key[index % len(key)] for index, byte in enumerate(raw))
+    return base64.urlsafe_b64encode(zlib.compress(xored, 9)).decode("ascii")
+
+
+def seal_endpoints_if_source(base_dir):
+    app_path = os.path.join(base_dir, "frames", "app.py")
+    endpoints_path = os.path.join(base_dir, "endpoints.json")
+    if not os.path.exists(app_path) or not os.path.exists(endpoints_path):
+        return
+
+    with open(endpoints_path, "r", encoding="utf-8-sig") as f:
+        endpoint_data = json.load(f)
+    blob = _make_endpoint_blob(endpoint_data)
+
+    with open(app_path, "r", encoding="utf-8") as f:
+        source = f.read()
+
+    pattern = r'^(SEALED_ENDPOINTS\s*=\s*)"[A-Za-z0-9_\-=]*"'
+    patched, count = re.subn(pattern, rf'\1"{blob}"', source, count=1, flags=re.MULTILINE)
+    if count == 0:
+        raise RuntimeError("SEALED_ENDPOINTS tidak ditemukan di frames/app.py")
+    if patched != source:
+        with open(app_path, "w", encoding="utf-8") as f:
+            f.write(patched)
+
+
+def _remove_readonly(func, path):
+    os.chmod(path, os.stat(path).st_mode | stat.S_IWRITE)
+    func(path)
+
+
+def cleanup_files(*filenames):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    base_real = os.path.realpath(base_dir)
+
+    for filename in filenames:
+        path = os.path.realpath(os.path.join(base_dir, filename))
+        if path == base_real or not path.startswith(base_real + os.sep):
+            continue
+
+        try:
+            if os.path.isdir(path):
+                shutil.rmtree(path, onerror=_remove_readonly)
+            elif os.path.isfile(path):
+                os.chmod(path, os.stat(path).st_mode | stat.S_IWRITE)
+                os.remove(path)
+        except OSError:
+            pass
+
+
+def check_deps():
+    """Periksa dan instal dependensi yang belum ada."""
+    deps = {
+        "customtkinter": "customtkinter",
+        "requests": "requests",
+        "openpyxl": "openpyxl",
+        "dotenv": "python-dotenv",
+        "bs4": "beautifulsoup4",
+    }
+    missing = []
+    for imp_name, pkg_name in deps.items():
+        try:
+            __import__(imp_name)
+        except ImportError:
+            missing.append(pkg_name)
+
+    if missing:
+        import subprocess
+        print(f"Menginstal dependensi: {', '.join(missing)}...")
+        subprocess.check_call(
+            [sys.executable, "-m", "pip", "install", *missing, "-q"],
+            stdout=subprocess.DEVNULL
+        )
+        print("Dependensi terinstal.")
+
+
+def main():
+    cleanup_files("extras.7z")
+    check_deps()
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    if not os.path.isdir(os.path.join(base_dir, "frames")):
+        print("Folder frames tidak ditemukan.")
+        sys.exit(1)
+
+    seal_endpoints_if_source(base_dir)
+    gui = importlib.import_module("frames.gui")
+    app = gui.Gui()
+    app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
