@@ -18,6 +18,10 @@
     "Menambahkan rule validasi"
   ],
   "3.2605.25.lt": [
-    "ekspose kode"
+    "ekspose kode",
+    "bug fixes"
+  ],
+  "3.2605.25.lts": [
+    "perbaiki eror fatal karena ekspose kode"
   ]
 }
