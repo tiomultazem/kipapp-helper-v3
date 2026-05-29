@@ -10,6 +10,15 @@ Masih gak mau pindah ke v3? Yaudah.
 
 ---
 
+## EXTRAS
+sori aku beberapa hari terakhir ini lagi menambah beberapa security layer ke kodingan, untuk meminimalisir pihak ga bertanggung jawab atas hal-hal yang ga diinginkan. Jadi mungkin beberapa versi yang kalian donlot di 4 hari terakhir ini kadang gagal dijalankan.
+
+Tapi tenang, per versi 3.2605.29.lt ini sudah aman dan dites bisa berjalan. Enjoy.
+
+Kabarin aja kalo aplikasi KiPApp Helper v3 kalian bermasalah. Aku terima keluhan 24/7. Terima doang, balesnya 24*7. Canda bales.
+
+---
+
 ## Persiapan
 Saya asumsikan anda lanjut membaca karena ingin pindah ke versi 3. Here we go.
 1. Download dan instal Python (kalo anda pengguna KiPApp Helper versi 2, gausah instal lagi)
