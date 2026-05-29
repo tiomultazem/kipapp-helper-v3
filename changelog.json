@@ -23,5 +23,9 @@
   ],
   "3.2605.25.lts": [
     "perbaiki eror fatal karena ekspose kode"
+  ],
+  "3.2605.29.lt": [
+    "mengganti versi main",
+    "untuk stabilitas"
   ]
 }
