@@ -14,6 +14,7 @@ v3.13_venv/
 v3.14_venv/
 nuitka.bat
 c.bat
+*.lnk
 pushone.bat
 _temp_build_*/
 endpoints.json
