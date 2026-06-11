@@ -1,11 +1,11 @@
 {
-  "currentVersion": "3.2605.29.lt",
+  "currentVersion": "3.2606.11.lt",
   "dev_restart": false,
   "entri": {
     "max_workers": 3
   },
   "ui": {
-    "theme": "light",
+    "theme": "dark",
     "frames": {
       "skp": {
         "expanded": true
@@ -24,7 +24,7 @@
       }
     },
     "task": {
-      "import_mode": "Excel"
+      "import_mode": "Spreadsheet"
     }
   }
 }
