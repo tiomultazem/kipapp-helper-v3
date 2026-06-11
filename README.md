@@ -52,7 +52,7 @@ Format jam yang aman: `HH:MM`, `H:MM`, `HH.MM`, `H.MM`, `HHMM`, angka jam sepert
 pake titik di depannya.
 
 > [!NOTE]
-> Anda tidak perlu pusing instal dependensi manual. Cukup jalankan `python main.py`, dan aplikasi akan otomatis menyiapkan semuanya untuk anda.
+> Anda tidak perlu pusing instal dependensi manual. Cukup klik 2x file `run.bat`, dan aplikasi akan otomatis menyiapkan semuanya untuk anda.
 
 ---
 
