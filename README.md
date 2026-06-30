@@ -31,7 +31,7 @@ Saya asumsikan anda lanjut membaca karena ingin pindah ke versi 3. Here we go.
 | 2 | End Date | Tidak | Tanggal. Isi hanya bila memakai rentang tanggal. Jika kosong, tetap kosong. |
 | 3 | Jam Mulai | Tidak | Jam. Aplikasi akan mengubahnya jadi `HH:MM`. Isi hanya bila memakai rentang jam. |
 | 4 | Jam Selesai | Tidak | Jam. Aplikasi akan mengubahnya jadi `HH:MM`. Isi hanya bila memakai rentang jam. |
-| 5 | Rencana Kinerja | Ya | Isi nomor RK sesuai tabel di aplikasi. Nanti klik `Ubah RK`. |
+| 5 | Rencana Kinerja | Ya | Isi nomor RK (misal: `1`, `2`) atau teks literal RK (misal: `Meningkatnya...`) sesuai tabel di aplikasi. Nanti klik `Ubah RK`. |
 | 6 | Kegiatan | Ya | Minimal 10 karakter. |
 | 7 | Capaian | Ya | Minimal 10 karakter. |
 | 8 | Progres | Ya | Isi 1-100. Biasanya 100. |
@@ -63,7 +63,7 @@ tombol logout merah muncul.
 3. SKP dan RK akan dimuat otomatis setelah login. Pilih SKP yang akan anda entri dari dropdown. Pastikan sudah membuat wadah periodiknya di KiPApp.
 > Saya berencana menambahkan fitur pembuatan wadah periodik ini, tapi nanti ketika tidak malas.
 4. Perhatikan bahwa baris-baris RK memiliki nomor di kolom "No.".
-5. Buka Excel SKP anda yang sudah disiapkan. Isi di kolom Rencana Kinerja dengan nomor sesuai nomor di KiPApp Helper. Simpan.
+5. Buka Excel SKP anda yang sudah disiapkan. Isi di kolom Rencana Kinerja dengan nomor RK atau teks literal RK sesuai di KiPApp Helper. Simpan.
 6. Impor Excel SKP tersebut ke aplikasi dengan klik "Impor Kegiatan". 
 7. Akan muncul tombol "Ubah RK". Klik untuk mengubah angka-angka RK di SKP anda yang mau dientri dengan RK yang sesungguhnya. KiPApp Helper akan otomatis mengubahnya.
 8. Pastikan kolom berbintang sudah diisi semua, dan isian sudah benar. Siap entri? klik tombol biru "Entri".
