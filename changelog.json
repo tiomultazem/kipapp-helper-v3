@@ -34,5 +34,9 @@
   "3.2606.30": [
     "perbaikan bug kegagalan menghapus tampilan tabel SKP",
     "perampingan codebase untuk meningkatkan performa"
+  ],
+  "3.2606.33": [
+    "perbaikan bug kegagalan menghapus tampilan tabel SKP",
+    "perampingan codebase untuk meningkatkan performa"
   ]
 }
