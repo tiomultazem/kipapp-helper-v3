@@ -35,9 +35,9 @@ fi
 
 echo "Replace file aplikasi..."
 if command -v rsync >/dev/null 2>&1; then
-  rsync -a --delete "$SRC_DIR"/ "$BASE_DIR"/
+  rsync -a --delete --exclude=.env --exclude=cache/ --exclude=.git/ --exclude=.vscode/ "$SRC_DIR"/ "$BASE_DIR"/
 else
-  find "$BASE_DIR" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+  find "$BASE_DIR" -mindepth 1 -maxdepth 1 ! -name ".env" ! -name "cache" ! -name ".git" ! -name ".vscode" -exec rm -rf {} +
   cp -a "$SRC_DIR"/. "$BASE_DIR"/
 fi
 
