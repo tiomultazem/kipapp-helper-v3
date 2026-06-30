@@ -1,0 +1,30 @@
+{
+  "currentVersion": "3.2606.30",
+  "dev_restart": false,
+  "entri": {
+    "max_workers": 3
+  },
+  "ui": {
+    "theme": "light",
+    "frames": {
+      "skp": {
+        "expanded": true
+      },
+      "task": {
+        "expanded": true
+      },
+      "rk": {
+        "expanded": true
+      },
+      "entri": {
+        "expanded": true
+      },
+      "log": {
+        "expanded": true
+      }
+    },
+    "task": {
+      "import_mode": "Spreadsheet"
+    }
+  }
+}
