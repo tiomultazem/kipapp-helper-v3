@@ -1,11 +1,11 @@
 {
-  "currentVersion": "3.2606.33",
+  "currentVersion": "3.2607.01.lt",
   "dev_restart": false,
   "entri": {
     "max_workers": 3
   },
   "ui": {
-    "theme": "light",
+    "theme": "dark",
     "frames": {
       "skp": {
         "expanded": true
@@ -27,5 +27,5 @@
       "import_mode": "Spreadsheet"
     }
   },
-  "last_pid": 16248
+  "last_pid": 2756
 }

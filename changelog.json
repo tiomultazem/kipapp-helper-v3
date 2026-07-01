@@ -35,8 +35,12 @@
     "perbaikan bug kegagalan menghapus tampilan tabel SKP",
     "perampingan codebase untuk meningkatkan performa"
   ],
-  "3.2606.33": [
+  "3.2606.30.blt": [
     "perbaikan bug kegagalan menghapus tampilan tabel SKP",
     "perampingan codebase untuk meningkatkan performa"
+  ],
+  "3.2607.01.lt": [
+    "dukungan deteksi string RK agar user tidak kebingungan memetakan RK menggunakan angka",
+    "perbaikan bug"
   ]
 }

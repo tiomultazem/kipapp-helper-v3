@@ -46,13 +46,16 @@ Format jam yang aman: `HH:MM`, `H:MM`, `HH.MM`, `H.MM`, `HHMM`, angka jam sepert
 ## Instalasi
 1. Download ZIP KiPApp Helper v3 dari GitHub.
 2. Ekstrak ZIP ke folder yang anda mau.
-3. Jalankan dengan klik 2x file `run.bat`.
+3. Jalankan aplikasi sesuai sistem operasi anda:
+   - **Windows:** Klik 2x berkas `run.bat`.
+   - **macOS:** Klik 2x berkas `run.command`. *(Jika muncul kendala izin/permission, jalankan `chmod +x run.command` di Terminal sekali saja).*
+   - **Linux:** Jalankan `./run.sh` di Terminal. *(Pastikan sudah menjalankan `chmod +x run.sh` terlebih dahulu).*
 4. Jendela KiPApp Helper v3 akan terbuka.
 5. Buka file env, isi username dan password SSO anda. Lalu simpan dan edit namanya menjadi ".env"
 pake titik di depannya.
 
 > [!NOTE]
-> Anda tidak perlu pusing instal dependensi manual. Cukup klik 2x file `run.bat`, dan aplikasi akan otomatis menyiapkan semuanya untuk anda.
+> Anda tidak perlu pusing instal dependensi manual. Cukup jalankan berkas peluncur sesuai OS anda (`run.bat` / `run.command` / `run.sh`), dan aplikasi akan otomatis menyiapkan semuanya untuk anda.
 
 ---
 
