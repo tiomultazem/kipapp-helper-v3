@@ -2,20 +2,30 @@
 
 Masih pake versi 2? Ga mau pindah ke versi ini yang berkali lipat lebih cepat? Gapapa, emang ga semua siap dengan perubahan.
 
-FYI, kalo v2 bisa entri satu baris SKP anda dalam **10 detik**, v3 ini cuma butuh **1.5 detik untuk entri 12 baris**.
+FYI, kalo v2 bisa entri satu baris SKP anda dalam **10 detik**, v3 ini cuma butuh **0.4 detik/baris**.
 
-Ini ga bohong. Ini hasil 1x uji coba dummy SKP.
+Ini ga bohong. Bisa dilihat di bawah ini, di mana ketika aku mensimulasikan entri 250 baris, speed nya konstan antara 0.2-0.5 detik.
+
+![graph](assets/graph.png)
 
 Masih gak mau pindah ke v3? Yaudah.
 
 ---
 
-## EXTRAS
-sori aku beberapa hari terakhir ini lagi menambah beberapa security layer ke kodingan, untuk meminimalisir pihak ga bertanggung jawab atas hal-hal yang ga diinginkan. Jadi mungkin beberapa versi yang kalian donlot di 4 hari terakhir ini kadang gagal dijalankan.
+## Update
 
-Tapi tenang, per versi 3.2605.29.lt ini sudah aman dan dites bisa berjalan. Enjoy.
+Pada pembaruan versi **3.2607.01.lt**, kami menambahkan fitur penyuntingan langsung (*in-place editing*) dengan dobel klik pada sel tabel kegiatan, penandaan warna merah dinamis untuk baris dengan Rencana Kinerja (RK) yang belum terpetakan, serta validasi entri otomatis yang kini hanya memproses baris kegiatan terpilih yang dicentang.
 
-Kabarin aja kalo aplikasi KiPApp Helper v3 kalian bermasalah. Aku terima keluhan 24/7. Terima doang, balesnya 24*7. Canda bales.
+| Versi | Perubahan / Changelog |
+| :--- | :--- |
+| **3.2607.01.lt** | • Fitur klik 2x sel tabel kegiatan untuk menyunting secara langsung (*in-place*).<br>• Baris dengan Rencana Kinerja (RK) belum terpetakan diwarnai merah dinamis.<br>• Proses entri hanya memproses baris kegiatan terpilih yang dicentang (dilengkapi validasi peringatan jika kosong).<br>• Dukungan pencocokan nama RK otomatis berbasis teks/string agar lebih fleksibel.<br>• Perbaikan bug minor dan efisiensi memori. |
+| **3.2606.30.blt** / **3.2606.30** | • Perbaikan *bug* kegagalan menghapus tampilan tabel SKP.<br>• Perampingan codebase untuk meningkatkan performa. |
+| **3.2606.11.lt** | • Perbaikan penyesuaian pelebaran kolom. |
+| **3.2605.29.lt** | • Mengganti versi utama untuk meningkatkan stabilitas sistem. |
+| **3.2605.25.lts** / **3.2605.25.lt** | • Perbaikan kesalahan fatal terkait pembukaan ekspos kode.<br>• Perbaikan bug umum. |
+| **3.2605.20** / **3.2605.21** | • Penambahan aturan validasi data.<br>• Perbaikan bug umum. |
+| **3.2605.17** | • Dukungan impor dari spreadsheet.<br>• Peningkatan pengalaman pengguna (UX).<br>• Metode pembaruan aplikasi yang lebih mudah. |
+| **3.2605.09** / **3.2605.10** | • Rilis awal KiPApp Helper v3.<br>• Perbaikan minor dan dokumentasi. |
 
 ---
 
@@ -23,7 +33,7 @@ Kabarin aja kalo aplikasi KiPApp Helper v3 kalian bermasalah. Aku terima keluhan
 Saya asumsikan anda lanjut membaca karena ingin pindah ke versi 3. Here we go.
 1. Download dan instal Python (kalo anda pengguna KiPApp Helper versi 2, gausah instal lagi)
 2. Download KiPApp Helper v3 versi ZIP dari GitHub, lalu ekstrak.
-3. Siapkan excel SKP dengan 10 kolom urut dari kiri. Yang tidak berbintang berarti boleh kosongan.
+3. Siapkan excel SKP dengan 10 kolom urut dari kiri. Yang tidak wajib berarti boleh kosongan.
 
 | Kolom | Judul | Wajib | Aturan isi |
 |---:|---|:---:|---|
@@ -40,6 +50,7 @@ Saya asumsikan anda lanjut membaca karena ingin pindah ke versi 3. Here we go.
 
 Format tanggal yang aman: `YYYY-MM-DD`, `DD-MM-YYYY`, `DD/MM/YYYY`, `YYYY/MM/DD`, `DD.MM.YYYY`, `YYYYMMDD`, atau format tanggal asli Excel.
 Format jam yang aman: `HH:MM`, `H:MM`, `HH.MM`, `H.MM`, `HHMM`, angka jam seperti `8`, atau format jam asli Excel.
+> Pro tips: sebelum impor, pas masih di excel/spreadsheet, konversi kolom tanggal menjadi format tanggal dulu, biar ga eror pas impor.
 
 ---
 

@@ -42,5 +42,8 @@
   "3.2607.01.lt": [
     "dukungan deteksi string RK agar user tidak kebingungan memetakan RK menggunakan angka",
     "perbaikan bug"
+  ],
+  "3.2607.02.lt": [
+    "perubahan tata letak"
   ]
 }
