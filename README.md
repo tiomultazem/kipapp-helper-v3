@@ -14,7 +14,7 @@ Masih gak mau pindah ke v3? Yaudah.
 
 ## Update
 
-Pada pembaruan versi **3.2607.29.pc**, kami merilis *versi aplikasi Standalone Executable*. Pengguna windows ga perlu lagi instal Pythondan tetek bengeknya. Tinggal run aja! 
+Pada pembaruan versi **3.2607.29.pc**, kami merilis *versi aplikasi Standalone Executable*. Pengguna windows ga perlu lagi instal Python dan tetek bengeknya. Tinggal run aja! 
 
 Pengguna Linux/Mac? Sabar ya, gimme a Mac so I can code for you too.
 
@@ -34,7 +34,7 @@ Pengguna Linux/Mac? Sabar ya, gimme a Mac so I can code for you too.
 
 ## Persiapan
 Saya asumsikan anda lanjut membaca karena ingin pindah ke versi 3. Here we go.
-1. **Tanpa Instal Python!** Anda tidak perlu lagi menginstal Python. Cukup unduh paket siap pakai (`.zip`) dari halaman Releases GitHub.
+1. **Tanpa Instal Python!** Anda tidak perlu lagi menginstal Python. Cukup unduh paket siap pakai (`.zip`) dari halaman [Releases GitHub](https://github.com/tiomultazem/kipapp-helper-v3/releases).
 2. Ekstrak paket ZIP yang diunduh.
 3. Siapkan excel SKP dengan 10 kolom urut dari kiri. Yang tidak wajib berarti boleh kosongan.
 
@@ -74,10 +74,6 @@ Format jam yang aman: `HH:MM`, `H:MM`, `HH.MM`, `H.MM`, `HHMM`, angka jam sepert
    pip install -r requirements.txt
    python main.py
    ```
-
-> [!NOTE]
-> Biner `.exe` hanya untuk Windows. Pengguna macOS/Linux harus menjalankan aplikasi lewat kode sumber Python (`main.py`).
-
 ---
 
 ## Panduan Penggunaan
@@ -88,8 +84,8 @@ tombol logout merah muncul.
 > Saya berencana menambahkan fitur pembuatan wadah periodik ini, tapi nanti ketika tidak malas.
 4. Perhatikan bahwa baris-baris RK memiliki nomor di kolom "No.".
 5. Buka Excel SKP anda yang sudah disiapkan. Isi di kolom Rencana Kinerja dengan nomor RK atau teks literal RK sesuai di KiPApp Helper. Simpan.
-6. Impor Excel SKP tersebut ke aplikasi dengan klik "Impor Kegiatan". 
-7. Akan muncul tombol "Ubah RK". Klik untuk mengubah angka-angka RK di SKP anda yang mau dientri dengan RK yang sesungguhnya. KiPApp Helper akan otomatis mengubahnya.
+6. Impor Excel SKP tersebut ke aplikasi dengan klik "Impor Kegiatan". SKP anda akan terimpor dengan kondisi baris merah. Jangan panik, ini cuma 
+7. Akan muncul tombol "Ubah RK". Klik untuk mengubah angka-angka RK di SKP anda yang mau dientri dengan RK yang sesungguhnya. KiPApp Helper akan otomatis mengubahnya. Baris 
 8. Pastikan kolom berbintang sudah diisi semua, dan isian sudah benar. Siap entri? klik tombol biru "Entri".
 9. Bila SKP anda berjumlah 100 baris, estimasi saya tidak akan sampai 10 detik seluruhnya sudah terinput ke KiPApp. Bisa dilihat di pesan log, berapa lama entri KiPApp anda berjalan.
 10. Silakan buka browser anda dan login ke KiPApp, buka periode SKP yang barusan anda entri. SKP anda sudah terentri seluruhnya kan?
