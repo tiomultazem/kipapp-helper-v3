@@ -84,8 +84,9 @@ tombol logout merah muncul.
 > Saya berencana menambahkan fitur pembuatan wadah periodik ini, tapi nanti ketika tidak malas.
 4. Perhatikan bahwa baris-baris RK memiliki nomor di kolom "No.".
 5. Buka Excel SKP anda yang sudah disiapkan. Isi di kolom Rencana Kinerja dengan nomor RK atau teks literal RK sesuai di KiPApp Helper. Simpan.
-6. Impor Excel SKP tersebut ke aplikasi dengan klik "Impor Kegiatan". SKP anda akan terimpor dengan kondisi baris merah. Jangan panik, ini cuma 
-7. Akan muncul tombol "Ubah RK". Klik untuk mengubah angka-angka RK di SKP anda yang mau dientri dengan RK yang sesungguhnya. KiPApp Helper akan otomatis mengubahnya. Baris 
+6. Impor Excel SKP tersebut ke aplikasi dengan klik "Impor Kegiatan". SKP anda akan terimpor dengan kondisi baris merah. Jangan panik, ini cuma karena RK belum terpetakan aja.
+7. Akan muncul tombol "Ubah RK". Klik untuk mengubah angka-angka RK di SKP anda yang mau dientri dengan RK yang sesungguhnya. KiPApp Helper akan otomatis mengubahnya. Baris-baris yang RK nya sudah OK akan berubah menjadi warna default tema aplikasi.
+> 
 8. Pastikan kolom berbintang sudah diisi semua, dan isian sudah benar. Siap entri? klik tombol biru "Entri".
 9. Bila SKP anda berjumlah 100 baris, estimasi saya tidak akan sampai 10 detik seluruhnya sudah terinput ke KiPApp. Bisa dilihat di pesan log, berapa lama entri KiPApp anda berjalan.
 10. Silakan buka browser anda dan login ke KiPApp, buka periode SKP yang barusan anda entri. SKP anda sudah terentri seluruhnya kan?
