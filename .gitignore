@@ -19,6 +19,8 @@ pushone.bat
 _temp_build_*/
 endpoints.json
 context.txt
+audit.md
+commit.txt
 
 # Graph
 graph/
