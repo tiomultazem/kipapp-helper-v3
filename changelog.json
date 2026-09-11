@@ -53,5 +53,9 @@
     "Hapus total folder KiPApp Helper mu sekarang,",
     "mampir ke repo https://github.com/tiomultazem/kipapp-helper-v3",
     "dan unduh file exe nya. tidak perlu lagi bergantung pada python!"
+  ],
+  "3.2611.19.lt": [
+    "RK sekarang muncul sebagai dropdown, tidak perlu mencocokkan RK lagi di excel",
+    "Font kekecilan? Sekarang kamu bisa ubah ukuran font nya."
   ]
 }
