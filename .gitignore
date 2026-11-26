@@ -35,5 +35,5 @@ dist/
 venv_build/
 *.spec
 *.zip
-
-
+compile.bat
+*.pyd
